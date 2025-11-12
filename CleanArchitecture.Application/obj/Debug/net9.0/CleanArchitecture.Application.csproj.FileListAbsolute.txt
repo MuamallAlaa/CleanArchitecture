@@ -1,0 +1,17 @@
+C:\Users\meomm\RiderProjects\CleanArchitecture\CleanArchitecture.Application\bin\Debug\net9.0\CleanArchitecture.Application.deps.json
+C:\Users\meomm\RiderProjects\CleanArchitecture\CleanArchitecture.Application\bin\Debug\net9.0\CleanArchitecture.Application.dll
+C:\Users\meomm\RiderProjects\CleanArchitecture\CleanArchitecture.Application\bin\Debug\net9.0\CleanArchitecture.Application.pdb
+C:\Users\meomm\RiderProjects\CleanArchitecture\CleanArchitecture.Application\bin\Debug\net9.0\CleanArchitecture.Contracts.dll
+C:\Users\meomm\RiderProjects\CleanArchitecture\CleanArchitecture.Application\bin\Debug\net9.0\CleanArchitecture.Domain.dll
+C:\Users\meomm\RiderProjects\CleanArchitecture\CleanArchitecture.Application\bin\Debug\net9.0\CleanArchitecture.Contracts.pdb
+C:\Users\meomm\RiderProjects\CleanArchitecture\CleanArchitecture.Application\bin\Debug\net9.0\CleanArchitecture.Domain.pdb
+C:\Users\meomm\RiderProjects\CleanArchitecture\CleanArchitecture.Application\obj\Debug\net9.0\CleanArchitecture.Application.csproj.AssemblyReference.cache
+C:\Users\meomm\RiderProjects\CleanArchitecture\CleanArchitecture.Application\obj\Debug\net9.0\CleanArchitecture.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\meomm\RiderProjects\CleanArchitecture\CleanArchitecture.Application\obj\Debug\net9.0\CleanArchitecture.Application.AssemblyInfoInputs.cache
+C:\Users\meomm\RiderProjects\CleanArchitecture\CleanArchitecture.Application\obj\Debug\net9.0\CleanArchitecture.Application.AssemblyInfo.cs
+C:\Users\meomm\RiderProjects\CleanArchitecture\CleanArchitecture.Application\obj\Debug\net9.0\CleanArchitecture.Application.csproj.CoreCompileInputs.cache
+C:\Users\meomm\RiderProjects\CleanArchitecture\CleanArchitecture.Application\obj\Debug\net9.0\CleanArc.03AFA812.Up2Date
+C:\Users\meomm\RiderProjects\CleanArchitecture\CleanArchitecture.Application\obj\Debug\net9.0\CleanArchitecture.Application.dll
+C:\Users\meomm\RiderProjects\CleanArchitecture\CleanArchitecture.Application\obj\Debug\net9.0\refint\CleanArchitecture.Application.dll
+C:\Users\meomm\RiderProjects\CleanArchitecture\CleanArchitecture.Application\obj\Debug\net9.0\CleanArchitecture.Application.pdb
+C:\Users\meomm\RiderProjects\CleanArchitecture\CleanArchitecture.Application\obj\Debug\net9.0\ref\CleanArchitecture.Application.dll
