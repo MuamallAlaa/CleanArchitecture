@@ -1,9 +1,11 @@
-﻿using CleanArchitecture.Application.Common.Services;
+﻿using CleanArchitecture.Application.Abstractions.Authentication;
+using CleanArchitecture.Application.Abstractions.Clock;
 using CleanArchitecture.Domain.Abstractions;
 using CleanArchitecture.Domain.User;
 using CleanArchitecture.Infrastructure.Authentication;
 using CleanArchitecture.Infrastructure.Persistence;
 using CleanArchitecture.Infrastructure.Services;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -15,9 +17,11 @@ public static class DependencyInjection
     public static IServiceCollection AddInfrastructure(this IServiceCollection services , ConfigurationManager configuration)
     {
         services.AddScoped<IUnitOfWork>(sp => sp.GetRequiredService<ApplicationDbContext>());
+        
         services.AddScoped<IUserRepository, UserRepository>();
 
         services.AddScoped<IDateTimeProvider, DateTimeProvider>();
+        
         services.Configure<JwtSettings>(configuration.GetSection(JwtSettings.SectionName));
         var connectionString =
             configuration.GetConnectionString("Database") ??
@@ -27,7 +31,20 @@ public static class DependencyInjection
         {
             options.UseNpgsql(connectionString);
         });
-
+        
+        Authentication(services, configuration);
+        
         return services;
+    }
+
+    public static void Authentication(IServiceCollection services, IConfiguration configuration)
+    {
+        services
+            .AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+            .AddJwtBearer();
+        
+        services.Configure<JwtSettings>(configuration.GetSection("JwtSettings"));
+        
+        services.AddScoped<IJwtService, JwtService>();
     }
 }

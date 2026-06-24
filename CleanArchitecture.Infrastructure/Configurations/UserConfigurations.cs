@@ -11,18 +11,21 @@ public class UserConfigurations : IEntityTypeConfiguration<User>
         builder.ToTable("users");
 
         builder.HasKey(user => user.Id);
+        
+        builder.Property(user => user.Id)
+            .HasConversion(userId => userId.Value, value => new UserId(value));
 
         builder.Property(user => user.FirstName)
             .HasMaxLength(200)
-            .HasConversion(firstName => firstName.Value, value => new FirstName(value));
+            .HasConversion(firstName => firstName.Value, value => (value));
 
         builder.Property(user => user.LastName)
             .HasMaxLength(200)
-            .HasConversion(firstName => firstName.Value, value => new LastName(value));
+            .HasConversion(firstName => firstName.Value, value => (value));
 
         builder.Property(user => user.Email)
             .HasMaxLength(400)
-            .HasConversion(email => email.Value, value => new Email(value));
+            .HasConversion(email => email.Value, value => (value));
         
         builder.Property(u => u.Password)
             .HasMaxLength(400)

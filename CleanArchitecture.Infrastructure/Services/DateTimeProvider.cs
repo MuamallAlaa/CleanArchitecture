@@ -1,4 +1,4 @@
-using CleanArchitecture.Application.Common.Services;
+using CleanArchitecture.Application.Abstractions.Clock;
 
 namespace CleanArchitecture.Infrastructure.Services;
 

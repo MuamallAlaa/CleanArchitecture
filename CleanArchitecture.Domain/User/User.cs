@@ -2,9 +2,9 @@ using CleanArchitecture.Domain.Abstractions;
 
 namespace CleanArchitecture.Domain.User;
 
-public sealed class User : Entity
+public sealed class User : Entity<UserId>
 {
-    private User(Guid id, FirstName firstName, LastName lastName, Email email , Password password)
+    private User(UserId id, FirstName firstName, LastName lastName, Email email , Password password)
         : base(id)
     {
         FirstName = firstName;
@@ -26,8 +26,12 @@ public sealed class User : Entity
 
     public static User Create(FirstName firstName, LastName lastName, Email email,Password password)
     {
-        var user = new User(Guid.NewGuid(), firstName, lastName, email,password);
+        var user = new User(UserId.New(), firstName, lastName, email,password);
         
         return user;
+    }
+    public bool VerifyPassword(string plainTextPassword)
+    {
+        return Password.Verify(plainTextPassword);
     }
 }

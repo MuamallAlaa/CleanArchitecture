@@ -4,7 +4,7 @@ public sealed record Password
 {
     public string Value { get; }
 
-    private Password(string value) // ← Private!
+    private Password(string value) 
     {
         Value = value;
     }
