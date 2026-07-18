@@ -12,7 +12,7 @@ internal sealed class LogInUserCommandHandler(IJwtService jwtService, IUserRepos
         LogInUserCommand request ,
         CancellationToken cancellationToken)
     {
-        var user = await userRepository.GetEmailAsync(request.Email, cancellationToken);
+        var user = await userRepository.GetByEmailAsync(request.Email, cancellationToken);
         
         if (user == null || !user.VerifyPassword(request.Password))
             return Result.Failure<AccessTokenResponse>(UserErrors.InvalidCredentials);
